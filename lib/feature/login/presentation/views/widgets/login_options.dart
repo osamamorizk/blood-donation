@@ -1,7 +1,9 @@
 import 'dart:developer';
 
+import 'package:blood_donation/core/router/routes.dart';
 import 'package:blood_donation/core/theaming/text_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginOptions extends StatelessWidget {
   const LoginOptions({super.key});
@@ -10,10 +12,12 @@ class LoginOptions extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        RememberOptions(),
+        const RememberOptions(),
         const Spacer(),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            GoRouter.of(context).push(Routes.kOtpView);
+          },
           child: Text(
             'هل نسيت كلمه المرور ؟',
             style: TextStyles.textStyle16.copyWith(
@@ -42,13 +46,17 @@ class _RememberOptionsState extends State<RememberOptions> {
     return Row(
       children: [
         Text('تذكرني ', style: TextStyles.textStyle16),
-        Checkbox(
-          value: isChecked,
-          onChanged: (bool? newValue) {
-            isChecked = newValue!;
-            log(isChecked.toString());
-            setState(() {});
-          },
+        SizedBox(
+          height: 20,
+          width: 25,
+          child: Checkbox(
+            value: isChecked,
+            onChanged: (bool? newValue) {
+              isChecked = newValue!;
+              log(isChecked.toString());
+              setState(() {});
+            },
+          ),
         )
       ],
     );

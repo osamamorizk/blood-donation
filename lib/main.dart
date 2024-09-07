@@ -1,7 +1,6 @@
 import 'package:blood_donation/consts.dart';
 import 'package:blood_donation/core/helpers/cashe_helper.dart';
-import 'package:blood_donation/feature/login/presentation/views/login_view.dart';
-import 'package:blood_donation/feature/onboarding/presentation/views/onboarding.dart';
+import 'package:blood_donation/core/router/go_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
@@ -18,7 +17,8 @@ class BloodDonation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
@@ -32,7 +32,6 @@ class BloodDonation extends StatelessWidget {
         primaryColor: kPrimaryColor,
       ),
       debugShowCheckedModeBanner: false,
-      home: onboarding ? const LoginView() : const Onboarding(),
     );
   }
 }

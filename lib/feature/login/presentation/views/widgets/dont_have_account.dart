@@ -1,4 +1,6 @@
+import 'package:blood_donation/core/router/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class DontHaveAccount extends StatelessWidget {
   const DontHaveAccount({super.key});
@@ -19,10 +21,12 @@ class DontHaveAccount extends StatelessWidget {
                 padding: EdgeInsets.zero,
                 tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                 alignment: Alignment.centerRight),
-            onPressed: () {},
+            onPressed: () {
+              GoRouter.of(context).push(Routes.kRegisterView);
+            },
             child: const Text(
               'يمكنك التسجيل من هنا',
-              style: TextStyle(color: Colors.white, fontSize: 19),
+              style: TextStyle(color: Colors.white, fontSize: 18),
             ),
           )
         ],

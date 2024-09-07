@@ -1,6 +1,9 @@
 import 'package:blood_donation/core/helpers/cashe_helper.dart';
+import 'package:blood_donation/core/router/go_router.dart';
+import 'package:blood_donation/core/router/routes.dart';
 import 'package:blood_donation/feature/login/presentation/views/login_view.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class CustomActionButton extends StatelessWidget {
   const CustomActionButton({
@@ -21,14 +24,7 @@ class CustomActionButton extends StatelessWidget {
       backgroundColor: Colors.red,
       onPressed: () async {
         if (isLast) {
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-              builder: (context) {
-                return LoginView();
-              },
-            ),
-          );
+          GoRouter.of(context).pushReplacement(Routes.kLoginView);
           await CasheHelper.saveData(key: 'onboarding', value: true);
         }
         controller.nextPage(
