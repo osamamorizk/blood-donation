@@ -1,4 +1,5 @@
 import 'package:blood_donation/consts.dart';
+import 'package:blood_donation/core/helpers/cashe_helper.dart';
 import 'package:blood_donation/core/theaming/text_styles.dart';
 import 'package:blood_donation/feature/auth/presentation/views/login_view.dart';
 import 'package:blood_donation/feature/onboarding/presentation/views/widgets/custom_action_button.dart';
@@ -24,7 +25,8 @@ class _OnboardingState extends State<Onboarding> {
           backgroundColor: Colors.white,
           actions: [
             TextButton(
-                onPressed: () {
+                onPressed: () async {
+                  await CasheHelper.saveData(key: 'onboarding', value: true);
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
@@ -85,3 +87,5 @@ class _OnboardingState extends State<Onboarding> {
     );
   }
 }
+
+void submit(context) {}

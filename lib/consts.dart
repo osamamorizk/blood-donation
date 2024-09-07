@@ -14,3 +14,5 @@ List<OnboardingModel> onboardList = [
           'عندما تتبرع بدمك، أنت تمنح قلبًا الفرصة ليستمر في النبض. كل وحدة دم قد تنقذ حياة كاملة، فكن أنت المنقذ',
       image: 'assets/images/onboarding_6.png')
 ];
+
+bool onboarding = false;

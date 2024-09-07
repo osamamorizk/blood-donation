@@ -1,3 +1,4 @@
+import 'package:blood_donation/core/helpers/cashe_helper.dart';
 import 'package:blood_donation/feature/auth/presentation/views/login_view.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class CustomActionButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(32),
       ),
       backgroundColor: Colors.red,
-      onPressed: () {
+      onPressed: () async {
         if (isLast) {
           Navigator.pushReplacement(
             context,
@@ -28,6 +29,7 @@ class CustomActionButton extends StatelessWidget {
               },
             ),
           );
+          await CasheHelper.saveData(key: 'onboarding', value: true);
         }
         controller.nextPage(
             duration: const Duration(milliseconds: 500),
