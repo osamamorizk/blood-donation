@@ -1,3 +1,5 @@
+import 'package:blood_donation/consts.dart';
+import 'package:blood_donation/feature/register/presentation/views/widgets/register_view_body.dart';
 import 'package:flutter/material.dart';
 
 class RegisterView extends StatelessWidget {
@@ -5,6 +7,17 @@ class RegisterView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        iconTheme: const IconThemeData(color: Colors.white),
+        backgroundColor: kPrimaryColor,
+        centerTitle: true,
+        title: const Text(
+          'انشاء حساب جديد',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
+        ),
+      ),
+      body: RegisterViewBody(),
+    );
   }
 }

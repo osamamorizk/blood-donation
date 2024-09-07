@@ -1,6 +1,6 @@
 import 'package:blood_donation/consts.dart';
 import 'package:blood_donation/core/helpers/cashe_helper.dart';
-import 'package:blood_donation/core/router/go_router.dart';
+import 'package:blood_donation/core/router/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 

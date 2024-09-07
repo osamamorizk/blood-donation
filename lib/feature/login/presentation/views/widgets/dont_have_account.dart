@@ -1,3 +1,4 @@
+import 'package:blood_donation/consts.dart';
 import 'package:blood_donation/core/router/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -8,7 +9,7 @@ class DontHaveAccount extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(color: Colors.red),
+      decoration: const BoxDecoration(color: kPrimaryColor),
       height: 45,
       width: MediaQuery.of(context).size.width,
       child: Row(

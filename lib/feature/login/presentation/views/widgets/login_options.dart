@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:blood_donation/consts.dart';
 import 'package:blood_donation/core/router/routes.dart';
 import 'package:blood_donation/core/theaming/text_styles.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class LoginOptions extends StatelessWidget {
           child: Text(
             'هل نسيت كلمه المرور ؟',
             style: TextStyles.textStyle16.copyWith(
-              color: Colors.red,
+              color: kPrimaryColor,
             ),
           ),
         ),

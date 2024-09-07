@@ -6,6 +6,8 @@ class OtpView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: OtpBody());
+    return const Scaffold(
+      body: OtpBody(),
+    );
   }
 }
