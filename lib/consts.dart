@@ -1,4 +1,5 @@
 import 'package:blood_donation/feature/onboarding/data/models/onboarding_model.dart';
+import 'package:flutter/material.dart';
 
 List<OnboardingModel> onboardList = [
   OnboardingModel(
@@ -16,3 +17,5 @@ List<OnboardingModel> onboardList = [
 ];
 
 bool onboarding = false;
+
+const kPrimaryColor = Color(0xff9A0C0B);
