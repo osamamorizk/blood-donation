@@ -22,7 +22,7 @@ class CustomTextFormField extends StatelessWidget {
         },
         keyboardType: keyboardType,
         decoration: InputDecoration(
-            contentPadding: const EdgeInsets.all(6),
+            contentPadding: const EdgeInsets.all(4),
             hintStyle: const TextStyle(fontSize: 14),
             prefixIconColor: kPrimaryColor,
             prefixIcon: prefixIcon,
