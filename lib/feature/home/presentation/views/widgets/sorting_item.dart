@@ -1,23 +1,30 @@
+import 'package:blood_donation/core/helpers/consts.dart';
 import 'package:flutter/material.dart';
 
-class RequestDonnerSorting extends StatefulWidget {
-  const RequestDonnerSorting(
+class SortingItem extends StatefulWidget {
+  const SortingItem(
       {super.key, required this.bloodTypeList, required this.hintText});
   final List<String> bloodTypeList;
   final String hintText;
   @override
-  State<StatefulWidget> createState() => _RequestDonnerSortingState();
+  State<StatefulWidget> createState() => _SortingItemState();
 }
 
-class _RequestDonnerSortingState extends State<RequestDonnerSorting> {
+class _SortingItemState extends State<SortingItem> {
   String? _selectedLocation; // Option 2
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
+      decoration: BoxDecoration(
+          color: Colors.grey.withOpacity(.3),
+          borderRadius: BorderRadius.circular(32)),
       width: 150,
+      height: 40,
       child: Center(
         child: DropdownButton(
+          style: TextStyle(color: kPrimaryColor, fontSize: 16),
+          elevation: 50,
           hint: Text(widget.hintText),
           value: _selectedLocation,
           onChanged: (newValue) {

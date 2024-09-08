@@ -1,5 +1,5 @@
-import 'package:blood_donation/core/helpers/consts.dart';
-import 'package:blood_donation/feature/home/presentation/views/widgets/blood_donner_sorting.dart';
+import 'package:blood_donation/feature/home/presentation/views/widgets/donnation_request.dart';
+import 'package:blood_donation/feature/home/presentation/views/widgets/sorting_donation_request.dart';
 import 'package:flutter/material.dart';
 
 class BloodDonationBody extends StatelessWidget {
@@ -7,25 +7,20 @@ class BloodDonationBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Column(
-        children: [
-          Row(
-            children: [
-              RequestDonnerSorting(
-                hintText: 'أختار فصيلة الدم',
-                bloodTypeList: kBloodTypeList,
-              ),
-              const Spacer(),
-              RequestDonnerSorting(
-                bloodTypeList: kEgyptGovernorates,
-                hintText: 'اختار المحافظة',
-              ),
-            ],
-          ),
-        ],
-      ),
+    return const Column(
+      children: [
+        SizedBox(
+          height: 10,
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20),
+          child: SortingDonationRequest(),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        DonnationRequest(),
+      ],
     );
   }
 }
