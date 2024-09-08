@@ -1,4 +1,4 @@
-import 'package:blood_donation/consts.dart';
+import 'package:blood_donation/core/helpers/consts.dart';
 import 'package:blood_donation/core/helpers/cashe_helper.dart';
 import 'package:blood_donation/core/router/app_router.dart';
 import 'package:flutter/material.dart';

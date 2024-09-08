@@ -4,5 +4,5 @@ abstract class Routes {
   static const kRegisterView = '/registerView';
   static const kHomeView = '/homeView';
   static const kVerification = '/verificationView';
-  static const kOnboarding = '/';
+  static const kOnboarding = '/onboarding';
 }

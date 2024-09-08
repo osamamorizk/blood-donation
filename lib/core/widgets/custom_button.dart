@@ -1,4 +1,4 @@
-import 'package:blood_donation/consts.dart';
+import 'package:blood_donation/core/helpers/consts.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {

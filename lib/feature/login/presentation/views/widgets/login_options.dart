@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:blood_donation/consts.dart';
+import 'package:blood_donation/core/helpers/consts.dart';
 import 'package:blood_donation/core/router/routes.dart';
 import 'package:blood_donation/core/theaming/text_styles.dart';
 import 'package:flutter/material.dart';

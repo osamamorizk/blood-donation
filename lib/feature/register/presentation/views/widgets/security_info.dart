@@ -12,7 +12,7 @@ class SecurityInfo extends StatelessWidget {
       children: [
         CustomTextFormField(
           hintText: 'رقم الهاتف',
-          prefixIcon: Icon(Icons.person),
+          prefixIcon: Icon(Icons.phone_enabled_outlined),
         ),
         SizedBox(
           height: 15,

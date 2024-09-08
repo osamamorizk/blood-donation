@@ -1,4 +1,4 @@
-import 'package:blood_donation/consts.dart';
+import 'package:blood_donation/core/helpers/consts.dart';
 import 'package:blood_donation/core/theaming/text_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -39,39 +39,41 @@ class _ChooseWidgetState extends State<ChooseWidget> {
             ),
           ),
           Expanded(
-            child: DropdownButton(
-              hint: Text(
-                widget.hintText,
-                style: const TextStyle(
-                  fontSize: 16,
-                ),
-              ),
-              padding: EdgeInsets.all(10),
-              iconSize: 18,
-              borderRadius: BorderRadius.circular(32),
-              isExpanded: true,
-              alignment: AlignmentDirectional.centerStart,
-              menuWidth: 150,
-              icon: const Icon(Icons.arrow_downward_rounded),
-              value: selectedLocation,
-              onChanged: (newValue) {
-                setState(() {
-                  selectedLocation = newValue!;
-                });
-              },
-              items: widget.chooseType.map((location) {
-                return DropdownMenuItem(
-                  value: location,
-                  child: Text(
-                    location,
-                    style: TextStyles.textStyle16.copyWith(
-                      color: Colors.black,
-                      fontWeight: FontWeight.normal,
-                      fontSize: 14,
-                    ),
+            child: DropdownButtonHideUnderline(
+              child: DropdownButton(
+                hint: Text(
+                  widget.hintText,
+                  style: const TextStyle(
+                    fontSize: 16,
                   ),
-                );
-              }).toList(),
+                ),
+                padding: EdgeInsets.all(10),
+                iconSize: 18,
+                borderRadius: BorderRadius.circular(32),
+                isExpanded: true,
+                alignment: AlignmentDirectional.centerStart,
+                menuWidth: 150,
+                icon: const Icon(Icons.arrow_downward_rounded),
+                value: selectedLocation,
+                onChanged: (newValue) {
+                  setState(() {
+                    selectedLocation = newValue!;
+                  });
+                },
+                items: widget.chooseType.map((location) {
+                  return DropdownMenuItem(
+                    value: location,
+                    child: Text(
+                      location,
+                      style: TextStyles.textStyle16.copyWith(
+                        color: Colors.black,
+                        fontWeight: FontWeight.normal,
+                        fontSize: 14,
+                      ),
+                    ),
+                  );
+                }).toList(),
+              ),
             ),
           ),
         ],

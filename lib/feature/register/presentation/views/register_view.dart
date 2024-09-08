@@ -1,4 +1,4 @@
-import 'package:blood_donation/consts.dart';
+import 'package:blood_donation/core/helpers/consts.dart';
 import 'package:blood_donation/feature/register/presentation/views/widgets/register_view_body.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +17,7 @@ class RegisterView extends StatelessWidget {
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
         ),
       ),
-      body: RegisterViewBody(),
+      body: const RegisterViewBody(),
     );
   }
 }
