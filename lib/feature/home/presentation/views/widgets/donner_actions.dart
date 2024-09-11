@@ -1,5 +1,7 @@
 import 'package:blood_donation/core/helpers/consts.dart';
+import 'package:blood_donation/core/router/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class DonnerActions extends StatelessWidget {
@@ -12,6 +14,9 @@ class DonnerActions extends StatelessWidget {
     return Row(
       children: [
         GestureDetector(
+          onTap: () {
+            GoRouter.of(context).push(Routes.kRequestInfo);
+          },
           child: const CircleAvatar(
               radius: 17,
               backgroundColor: kPrimaryColor,

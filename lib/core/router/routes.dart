@@ -8,4 +8,5 @@ abstract class Routes {
   static const kAddDonationRequest = '/AddDonationRequest';
 
   static const kArticleDetails = '/ArticleDetails';
+  static const kRequestInfo = '/RequestInfo';
 }

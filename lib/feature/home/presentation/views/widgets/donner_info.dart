@@ -5,6 +5,7 @@ class DonnerInfo extends StatelessWidget {
   const DonnerInfo({
     super.key,
   });
+  final String name = 'ابراهيم الشحات';
 
   @override
   Widget build(BuildContext context) {
@@ -33,21 +34,21 @@ class DonnerInfo extends StatelessWidget {
                 ),
               ],
             ),
-            child: const Column(
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'اسم الحاله : ابراهيم الشحات',
+                  'اسم الحاله :  $name',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
-                Text(
+                const Text(
                   'المستشفي : شربين',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
-                Text(
+                const Text(
                   'المدينة: شربين',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
