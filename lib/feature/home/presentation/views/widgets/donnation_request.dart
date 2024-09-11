@@ -9,8 +9,8 @@ class DonnationRequest extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView.builder(
-        // shrinkWrap: true,
-        itemCount: 20,
+        padding: const EdgeInsets.only(bottom: 60),
+        itemCount: 10,
         itemBuilder: (context, index) {
           return const Padding(
             padding: EdgeInsets.only(top: 8, left: 16, right: 2),

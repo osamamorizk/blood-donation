@@ -1,5 +1,7 @@
 import 'package:blood_donation/core/helpers/consts.dart';
 import 'package:blood_donation/core/router/routes.dart';
+import 'package:blood_donation/feature/home/presentation/views/add_donation_request.dart';
+import 'package:blood_donation/feature/home/presentation/views/article_details.dart';
 import 'package:blood_donation/feature/home/presentation/views/home_view.dart';
 import 'package:blood_donation/feature/login/presentation/views/login_view.dart';
 import 'package:blood_donation/feature/login/presentation/views/otp_view.dart';
@@ -38,6 +40,12 @@ abstract class AppRouter {
         },
       ),
       GoRoute(
+        path: Routes.kArticleDetails,
+        builder: (BuildContext context, GoRouterState state) {
+          return const ArticleDetails();
+        },
+      ),
+      GoRoute(
         path: Routes.kRegisterView,
         builder: (BuildContext context, GoRouterState state) {
           return const RegisterView();
@@ -47,6 +55,12 @@ abstract class AppRouter {
         path: Routes.kHomeView,
         builder: (BuildContext context, GoRouterState state) {
           return const HomeView();
+        },
+      ),
+      GoRoute(
+        path: Routes.kAddDonationRequest,
+        builder: (BuildContext context, GoRouterState state) {
+          return const AddDonationRequest();
         },
       ),
     ],

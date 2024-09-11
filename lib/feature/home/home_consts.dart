@@ -15,18 +15,21 @@ List<Widget> buildScreens() {
 List<PersistentBottomNavBarItem> navBarsItems() {
   return [
     PersistentBottomNavBarItem(
+      iconSize: 30,
       icon: const Icon(Icons.home),
       // title: ("Home"),
       activeColorPrimary: Colors.white,
       inactiveColorPrimary: Colors.grey,
     ),
     PersistentBottomNavBarItem(
+      iconSize: 30,
       icon: const Icon(Icons.person_rounded),
       // title: ("Favorite"),
       activeColorPrimary: Colors.white,
       inactiveColorPrimary: Colors.grey,
     ),
     PersistentBottomNavBarItem(
+      iconSize: 30,
       inactiveIcon: const Icon(
         Icons.notifications_none,
       ),
@@ -38,6 +41,7 @@ List<PersistentBottomNavBarItem> navBarsItems() {
       inactiveColorPrimary: Colors.grey,
     ),
     PersistentBottomNavBarItem(
+      iconSize: 40,
       icon: const Icon(Icons.more_horiz),
       // title: ("Setting"),
       activeColorPrimary: Colors.white,

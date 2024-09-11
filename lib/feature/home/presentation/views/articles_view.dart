@@ -21,7 +21,7 @@ class ArticlesView extends StatelessWidget {
             //   children: [SizedBox(width: 50, child: Example())],
             // ),
             suffixIcon: const Icon(Icons.search),
-            fillColor: Colors.grey.withOpacity(.2),
+            fillColor: Colors.grey.withOpacity(.15),
             hintText: 'ادخل كلمة البحث هنا',
           ),
           const SizedBox(

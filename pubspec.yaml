@@ -34,10 +34,10 @@ dependencies:
   flutter_localization: ^0.2.2
   flutter_native_splash: ^2.4.1
   go_router: ^14.2.7
+  persistent_bottom_nav_bar: ^6.2.1
   shared_preferences: ^2.3.2
   smooth_page_indicator: ^1.2.0+3
-  
-  persistent_bottom_nav_bar: ^6.2.1
+  url_launcher: ^6.3.0
 
 dev_dependencies:
   flutter_lints: ^4.0.0

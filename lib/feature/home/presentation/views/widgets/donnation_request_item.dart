@@ -10,7 +10,7 @@ class DonationRequestItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         DonnerInfo(),
         DonnerActions(),

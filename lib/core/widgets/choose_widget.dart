@@ -24,6 +24,7 @@ class _ChooseWidgetState extends State<ChooseWidget> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
+        color: Colors.grey.withOpacity(.05),
         borderRadius: BorderRadius.circular(32),
         border: Border.all(color: kPrimaryColor),
       ),
@@ -31,23 +32,27 @@ class _ChooseWidgetState extends State<ChooseWidget> {
       width: MediaQuery.of(context).size.width,
       child: Row(
         children: [
-          Padding(
-            padding: EdgeInsets.only(right: 8),
-            child: Icon(
-              widget.icon,
-              color: kPrimaryColor,
+          if (widget.icon != null)
+            Padding(
+              padding: const EdgeInsets.only(right: 10),
+              child: Icon(
+                widget.icon,
+                color: kPrimaryColor,
+              ),
             ),
-          ),
           Expanded(
             child: DropdownButtonHideUnderline(
               child: DropdownButton(
-                hint: Text(
-                  widget.hintText,
-                  style: const TextStyle(
-                    fontSize: 16,
+                hint: Padding(
+                  padding: const EdgeInsets.only(right: 10),
+                  child: Text(
+                    widget.hintText,
+                    style: const TextStyle(
+                      fontSize: 16,
+                    ),
                   ),
                 ),
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.only(left: 16),
                 iconSize: 18,
                 borderRadius: BorderRadius.circular(32),
                 isExpanded: true,
@@ -68,7 +73,7 @@ class _ChooseWidgetState extends State<ChooseWidget> {
                       style: TextStyles.textStyle16.copyWith(
                         color: Colors.black,
                         fontWeight: FontWeight.normal,
-                        fontSize: 14,
+                        fontSize: 16,
                       ),
                     ),
                   );

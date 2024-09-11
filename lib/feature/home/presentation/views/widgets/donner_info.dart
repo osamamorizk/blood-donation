@@ -10,7 +10,7 @@ class DonnerInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 80,
-      width: 260,
+      // width: 260,
       child: Stack(
         children: [
           Container(

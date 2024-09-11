@@ -9,13 +9,15 @@ class CustomTextFormField extends StatelessWidget {
       this.prefixIcon,
       this.suffixIcon,
       this.fillColor,
-      this.filled});
+      this.filled,
+      this.maxLines});
   final String hintText;
   final TextInputType? keyboardType;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   final Color? fillColor;
   final bool? filled;
+  final int? maxLines;
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +30,10 @@ class CustomTextFormField extends StatelessWidget {
         return null;
       },
       keyboardType: keyboardType,
+      maxLines: maxLines,
       decoration: InputDecoration(
-          filled: filled,
-          fillColor: fillColor,
+          filled: true,
+          fillColor: Colors.grey.withOpacity(.05),
           suffixIcon: suffixIcon,
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
@@ -48,7 +51,7 @@ class CustomTextFormField extends StatelessWidget {
 
 OutlineInputBorder borderBuild() {
   return OutlineInputBorder(
-    borderSide: BorderSide(color: kPrimaryColor),
+    borderSide: const BorderSide(color: kPrimaryColor),
     borderRadius: BorderRadius.circular(32),
   );
 }

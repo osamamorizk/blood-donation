@@ -1,4 +1,4 @@
-import 'package:blood_donation/feature/register/presentation/views/widgets/choose_widget.dart';
+import 'package:blood_donation/core/widgets/choose_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeInfo extends StatelessWidget {

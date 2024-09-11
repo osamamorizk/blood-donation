@@ -22,22 +22,24 @@ class _SortingItemState extends State<SortingItem> {
       width: 150,
       height: 40,
       child: Center(
-        child: DropdownButton(
-          style: TextStyle(color: kPrimaryColor, fontSize: 16),
-          elevation: 50,
-          hint: Text(widget.hintText),
-          value: _selectedLocation,
-          onChanged: (newValue) {
-            setState(() {
-              _selectedLocation = newValue;
-            });
-          },
-          items: widget.bloodTypeList.map((location) {
-            return DropdownMenuItem(
-              value: location,
-              child: Text(location),
-            );
-          }).toList(),
+        child: DropdownButtonHideUnderline(
+          child: DropdownButton(
+            style: const TextStyle(color: kPrimaryColor, fontSize: 16),
+            elevation: 50,
+            hint: Text(widget.hintText),
+            value: _selectedLocation,
+            onChanged: (newValue) {
+              setState(() {
+                _selectedLocation = newValue;
+              });
+            },
+            items: widget.bloodTypeList.map((location) {
+              return DropdownMenuItem(
+                value: location,
+                child: Text(location),
+              );
+            }).toList(),
+          ),
         ),
       ),
     );

@@ -5,4 +5,7 @@ abstract class Routes {
   static const kHomeView = '/homeView';
   static const kVerification = '/verificationView';
   static const kOnboarding = '/onboarding';
+  static const kAddDonationRequest = '/AddDonationRequest';
+
+  static const kArticleDetails = '/ArticleDetails';
 }
