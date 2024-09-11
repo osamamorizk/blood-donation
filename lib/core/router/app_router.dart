@@ -9,6 +9,8 @@ import 'package:blood_donation/feature/home/presentation/views/widgets/blood_don
 import 'package:blood_donation/feature/login/presentation/views/login_view.dart';
 import 'package:blood_donation/feature/login/presentation/views/otp_view.dart';
 import 'package:blood_donation/feature/login/presentation/views/verfication_view.dart';
+import 'package:blood_donation/feature/more/presentation/views/contact_us.dart';
+import 'package:blood_donation/feature/more/presentation/views/favorite_view.dart';
 import 'package:blood_donation/feature/onboarding/presentation/views/onboarding.dart';
 import 'package:blood_donation/feature/register/presentation/views/register_view.dart';
 import 'package:flutter/material.dart';
@@ -78,6 +80,18 @@ abstract class AppRouter {
           return HomeViewBody(
             initialIndex: 1,
           );
+        },
+      ),
+      GoRoute(
+        path: Routes.kFavortie,
+        builder: (BuildContext context, GoRouterState state) {
+          return FavoriteView();
+        },
+      ),
+      GoRoute(
+        path: Routes.kContactUs,
+        builder: (BuildContext context, GoRouterState state) {
+          return ContactUs();
         },
       ),
     ],

@@ -10,4 +10,6 @@ abstract class Routes {
   static const kArticleDetails = '/ArticleDetails';
   static const kRequestInfo = '/RequestInfo';
   static const kBloodDonation = '/bloodDonation';
+  static const kFavortie = '/favorite';
+  static const kContactUs = '/contact';
 }

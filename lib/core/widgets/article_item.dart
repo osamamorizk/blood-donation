@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class ArticleItem extends StatelessWidget {
-  const ArticleItem({super.key});
-
+  const ArticleItem({super.key, this.iconData});
+  final IconData? iconData;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -44,12 +44,12 @@ class ArticleItem extends StatelessWidget {
                 left: 5,
                 child: IconButton(
                   onPressed: () {},
-                  icon: const CircleAvatar(
+                  icon: CircleAvatar(
                     radius: 18,
                     backgroundColor: Colors.white,
                     child: Icon(
                       size: 24,
-                      Icons.favorite_border_outlined,
+                      iconData ?? Icons.favorite_border_outlined,
                     ),
                   ),
                 ),

@@ -1,5 +1,6 @@
 import 'package:blood_donation/feature/home/presentation/views/home_view_body.dart';
 import 'package:blood_donation/core/widgets/bottom_nav_bar.dart';
+import 'package:blood_donation/feature/more/presentation/views/more_view.dart';
 import 'package:blood_donation/feature/notification/presentation/views/notification_view.dart.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
@@ -9,7 +10,7 @@ List<Widget> buildScreens() {
     const HomeViewBody(),
     const Screen3(),
     const NotificationView(),
-    const Screen4(),
+    const MoreView()
   ];
 }
 
