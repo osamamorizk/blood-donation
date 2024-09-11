@@ -1,5 +1,5 @@
 import 'package:blood_donation/core/helpers/consts.dart';
-import 'package:blood_donation/feature/home/home_consts.dart';
+import 'package:blood_donation/core/helpers/home_consts.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
@@ -27,40 +27,6 @@ class BottomNavBar extends StatelessWidget {
         colorBehindNavBar: Colors.white,
       ),
       navBarStyle: NavBarStyle.style3,
-    );
-  }
-}
-
-class Screen1 extends StatelessWidget {
-  const Screen1({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Screen1')),
-      body: const Center(
-        child: Text(
-          'Screen1',
-          style: TextStyle(fontSize: 30),
-        ),
-      ),
-    );
-  }
-}
-
-class Screen2 extends StatelessWidget {
-  const Screen2({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Screen2')),
-      body: const Center(
-        child: Text(
-          'Screen2',
-          style: TextStyle(fontSize: 30),
-        ),
-      ),
     );
   }
 }

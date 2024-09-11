@@ -9,4 +9,5 @@ abstract class Routes {
 
   static const kArticleDetails = '/ArticleDetails';
   static const kRequestInfo = '/RequestInfo';
+  static const kBloodDonation = '/bloodDonation';
 }

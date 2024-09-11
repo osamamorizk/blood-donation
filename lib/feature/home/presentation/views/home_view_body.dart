@@ -4,7 +4,8 @@ import 'package:blood_donation/feature/home/presentation/views/blood_donner_view
 import 'package:flutter/material.dart';
 
 class HomeViewBody extends StatefulWidget {
-  const HomeViewBody({super.key});
+  const HomeViewBody({super.key, this.initialIndex});
+  final int? initialIndex;
 
   @override
   State<HomeViewBody> createState() => _HomeViewBodyState();
@@ -18,6 +19,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
+      initialIndex: widget.initialIndex ?? 0,
       length: taps.length,
       child: Scaffold(
         appBar: AppBar(
