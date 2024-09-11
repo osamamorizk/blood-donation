@@ -13,7 +13,7 @@ class DonnationRequest extends StatelessWidget {
         itemCount: 10,
         itemBuilder: (context, index) {
           return const Padding(
-            padding: EdgeInsets.only(top: 8, left: 16, right: 2),
+            padding: EdgeInsets.only(top: 8, left: 16, right: 10),
             child: DonationRequestItem(),
           );
         },

@@ -13,6 +13,7 @@ class DonnerInfo extends StatelessWidget {
       height: 80,
       // width: 260,
       child: Stack(
+        clipBehavior: Clip.none,
         children: [
           Container(
             width: 260,
